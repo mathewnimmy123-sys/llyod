@@ -1,0 +1,16 @@
+DOCUMENT: Lloyds Retail Investment Guidance & UK Tax Wrapper Policy (2026/27)
+
+SECTION 1: UK PENSION CONTRIBUTIONS & ALLOWANCES
+- Standard Annual Allowance: For the 2026/27 tax year, the UK pension annual allowance is £60,000 or 100% of relevant UK earnings, whichever is lower.
+- Tax Relief: Basic-rate taxpayers receive 20% tax relief automatically. Higher-rate (40%) and additional-rate (45%) taxpayers can claim extra relief via Self Assessment.
+- Tapered Allowance: Individuals with threshold income over £200,000 and adjusted income over £260,000 have their annual allowance reduced by £1 for every £2 over £260,000, down to a minimum of £10,000.
+- Guidance Boundary: Agents may explain tax relief mechanics and allowance caps, but must not recommend specific pension funds or give personal financial advice.
+
+SECTION 2: INDIVIDUAL SAVINGS ACCOUNTS (ISAs)
+- Annual ISA Limit: The overall annual ISA subscription limit is £20,000 across Cash ISAs, Stocks & Shares ISAs, and Innovative Finance ISAs.
+- Lifetime ISA (LISA): UK residents aged 18 to 39 can open a Lifetime ISA and contribute up to £4,000 per year (counting toward the £20,000 overall limit), receiving a 25% government bonus up to £1,000 annually.
+- Tax Treatment: All interest, dividends, and capital gains within an ISA are exempt from UK Income Tax and Capital Gains Tax.
+
+SECTION 3: FCA CONSUMER DUTY & FAIRNESS RULES
+- Capital at Risk: Investments can go down as well as up, and customers may get back less than they invest.
+- Regulated Advice vs. Guidance: Providing factual product rules and tax allowances is regulated guidance. Recommending a specific asset allocation or telling a customer what to buy constitutes regulated financial advice and must be declined.

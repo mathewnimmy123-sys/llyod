@@ -1,0 +1,5 @@
+google-adk>=1.0.0,<2.0.0
+python-dotenv>=1.0.0
+# Optional: direct Cloud Logging API sink (ENABLE_CLOUD_LOGGING=true). On Cloud Run the
+# stdout JSON audit line is ingested automatically, so this is not required there.
+google-cloud-logging>=3.10.0
