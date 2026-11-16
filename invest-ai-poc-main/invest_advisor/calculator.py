@@ -1,14 +1,3 @@
-"""Deterministic UK pension tax-relief maths (pure Python, no ADK).
-
-Correction vs the original POC: it computed gross = net / (1 - rate) for *every* band.
-That is only right for basic rate. Under relief-at-source the provider claims 20% on
-the customer's behalf (gross = net / 0.8); higher/additional-rate taxpayers then claim
-the *extra* (rate - 20%) via Self Assessment, which does NOT increase the amount in the
-pension. The policy document (Section 1) says exactly this.
-
-Money is handled with Decimal to avoid float drift; results are returned as floats/strings
-so they serialise cleanly for the LLM.
-"""
 
 from __future__ import annotations
 

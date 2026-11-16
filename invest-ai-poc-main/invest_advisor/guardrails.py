@@ -1,20 +1,3 @@
-"""ADK callback wiring for guardrails + audit. Rules themselves live in policy.py.
-
-Where each control sits (and why):
-  input_guardrail        root `before_agent_callback`  - runs ONCE per turn, before any LLM.
-                         Blocking returns Content, which skips the whole pipeline (no tokens spent).
-  sanitize_llm_request   `before_model_callback` on EVERY LLM agent - the original POC redacted
-                         PII only for the router, but sub-agents read the full session history,
-                         so they still saw raw NI numbers / emails. Redacting per model call
-                         guarantees no model ever receives them.
-  output_guardrail       `after_model_callback` on every answering agent - deterministic egress
-                         filter. Runs BEFORE the text is emitted, so an un-vetted draft is never
-                         shown to the customer (a separate "compliance LLM agent" stage would
-                         stream the draft first, cost an extra call and could alter facts).
-  cloud_logging_callback root `after_agent_callback`   - one structured record per turn.
-                         ADK skips after_agent_callback when before_agent_callback returned
-                         content, so the blocked path logs itself inside input_guardrail.
-"""
 
 from __future__ import annotations
 

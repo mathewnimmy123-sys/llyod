@@ -1,15 +1,4 @@
-"""Audit / observability sink.
 
-Three sinks, all best-effort (logging must NEVER break the customer response):
-  1. stdout JSON line  - on Cloud Run / GKE this is ingested by Cloud Logging automatically
-                         (a `severity` field maps to the log level).
-  2. local JSONL file  - handy for `adk web` demos and tests (LOCAL_AUDIT_LOG=true).
-  3. Cloud Logging API - direct `log_struct` when ENABLE_CLOUD_LOGGING=true. Requires GCP
-                         credentials (ADC / service account); an AI Studio API key is NOT enough.
-
-Records hold redacted text only, PII *counts* (never values) and chunk ids - so they are
-safe to retain for audit and to feed dashboards / log-based metrics (block rate, latency).
-"""
 
 from __future__ import annotations
 

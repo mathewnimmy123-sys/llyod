@@ -1,18 +1,3 @@
-"""Invest AI - agentic guidance pipeline (Google ADK).
-
-    adk web  ->  InvestAIGuidancePipeline (SequentialAgent)
-                   before_agent_callback : INPUT GUARDRAIL  (injection block, PII redaction)
-                   └─ IntentRouterAgent   : classifies + transfers
-                        ├─ RAGPolicyAgent             (search_investment_docs)
-                        └─ AllowanceCalculatorAgent   (calculate_pension_tax_relief, + docs)
-                      every LLM agent: before_model PII sanitiser, after_model OUTPUT GUARDRAIL
-                   after_agent_callback  : CLOUD LOGGING (structured audit record)
-
-Why the root is a SequentialAgent with a single child: ADK's Runner resumes the last
-transferred-to sub-agent on the next turn only when *every* ancestor is an LlmAgent. A
-SequentialAgent root disables that, so every customer turn re-enters the root and passes
-the input guardrail again (verify in `adk web` -> Trace on a 2-turn chat).
-"""
 
 from google.adk.agents import LlmAgent, SequentialAgent
 

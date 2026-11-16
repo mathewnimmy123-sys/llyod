@@ -1,12 +1,3 @@
-"""Pure-Python guardrail rules (no ADK imports, so they are fully unit-testable).
-
-`guardrails.py` wires these functions into ADK callbacks. Keeping the rules here means
-CI can test them in milliseconds without a model or network, and they can later be
-swapped for / layered under Vertex AI Model Armor without touching the agent wiring.
-
-NOTE: regex deny-lists are a *baseline*, not a complete defence. In production, layer
-Model Armor (prompt-injection, PII/DLP, harmful content) in front of these rules.
-"""
 
 from __future__ import annotations
 
